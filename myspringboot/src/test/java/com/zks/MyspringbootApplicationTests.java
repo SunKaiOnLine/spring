@@ -1,4 +1,4 @@
-package com.unimas.myspringboot;
+package com.zks;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

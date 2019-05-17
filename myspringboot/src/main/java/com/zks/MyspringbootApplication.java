@@ -1,9 +1,11 @@
-package com.unimas.myspringboot;
+package com.zks;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("com.zks.mapper")
 public class MyspringbootApplication {
 
     public static void main(String[] args) {

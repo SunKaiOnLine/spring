@@ -10,7 +10,18 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 配置proxy跨域请求代理
+    proxyTable: {
+      // url中匹配到 '/api' 就会吧url中 '/api' 之前的东西全部替换为下面target中的东西
+      '/user/*': {
+        target: 'http://127.0.0.1:8880',  //目标接口域名
+        changeOrigin: true,  //是否跨域
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        // pathRewrite: {
+        //   '^/api': '/'   //重写接口
+        // }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
